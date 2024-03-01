@@ -19,13 +19,3 @@ CMD ["npm","start"]
 FROM nginx:alpine
 
 COPY --from=build /app/build /usr/share/nginx/html
-
-#AUTO BUILD ET PUSH
-
-#FROM docker:latest
-
-#RUN docker login --username achechfiras --password dckr_pat_fZOVqFWLchOEwhrnt31vmSm31fM
-
-#RUN docker build -t img1 .
-
-#RUN docker push img1
