@@ -9,7 +9,7 @@ RUN npm install npm@latest -g
 COPY . . 
 
 RUN npm install -g create-react-app
-
+RUN npm i react-scripts
 RUN npm run build
 
 EXPOSE 3000
