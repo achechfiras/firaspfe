@@ -4,8 +4,9 @@ pipeline {
       stages {
         stage('Clone') {
             steps {
-                // Cloning the repository from GitHub
-                git credentialsId: 'your-credentials-id', url: 'https://github.com/achechfiras/firaspfe.git'
+                script{
+                    git credentialsId: 'your-credentials-id', url: 'https://github.com/achechfiras/firaspfe.git'
+                }
             }
         }
          
