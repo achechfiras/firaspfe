@@ -1,42 +1,18 @@
 pipeline {
     agent any
 
-     stages {
-        stage('clone') {
+      stages {
+        stage('Clone') {
             steps {
-                script {
-                    sh 'make clone'
-                }
+                // Cloning the repository from GitHub
+                git credentialsId: 'your-credentials-id', url: 'https://github.com/achechfiras/firaspfe.git'
             }
         }
          
-    stages {
-        stage('Build') {
-            steps {
-                script {
-                    // Appel du Makefile pour exécuter la règle 'build'
-                    sh 'make build'
+        stage ('Releasing Docker Image'){
+            steps{
+                script{
+                    sh 'make makefile deliver_image_to_dockerhub'
                 }
             }
         }
-        
-        stage('Deploy') {
-            steps {
-                script {
-                    // Appel du Makefile pour exécuter la règle 'deploy'
-                    sh 'make deploy'
-                }
-            }
-        }
-
-         stages {
-        stage('clean') {
-            steps {
-                script {
-                    
-                    sh 'make clean'
-                }
-            }
-        }
-    }
-}
