@@ -5,7 +5,7 @@ pipeline {
         stage('Clone') {
             steps {
                 script{
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'pfe', url: 'https://github.com/achechfiras/firaspfe.git']])
+                    #checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'pfe', url: 'https://github.com/achechfiras/firaspfe.git']])
                     git credentialsId: 'pfe', url: 'https://github.com/achechfiras/firaspfe.git'
                 }
             }
