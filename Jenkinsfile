@@ -5,7 +5,7 @@ pipeline {
         stage('Clone') {
             steps {
                 script{
-                    git credentialsId: 'pfe', url: 'https://github.com/achechfiras/firaspfe.git'
+                    git credentialsId: 'pfecred', url: 'https://github.com/achechfiras/firaspfe.git'
                 }
             }
         }
