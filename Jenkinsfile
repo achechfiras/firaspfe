@@ -1,19 +1,21 @@
 pipeline {
     agent any
 
-      stages {
+    stages {
         stage('Clone') {
             steps {
-                script{
+                script {
                     git credentialsId: 'pfecred', url: 'https://github.com/achechfiras/firaspfe.git'
                 }
             }
         }
          
-        stage ('Releasing Docker Image'){
-            steps{
-                script{
+        stage ('Releasing Docker Image') {
+            steps {
+                script {
                     sh 'make makefile deliver_image_to_dockerhub'
                 }
             }
         }
+    } 
+}
