@@ -13,8 +13,7 @@ pipeline {
         stage ('Releasing Docker Image') {
             steps {
                 script {
-                    echo 'hello word'
-                    
+                    sh 'make Makefile deliver_image_to_dockerhub'
                 }
             }
         }
