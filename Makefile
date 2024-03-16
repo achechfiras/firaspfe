@@ -15,3 +15,7 @@ push:
     docker tag $(DOCKER_ImageName) $(DOCKER_TAG)
     docker login -u $(DOCKER_USERNAME) -p $(DOCKER_PASSWORD)
     docker push $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
+
+cleanup:
+    cd ..
+    rm -r firaspfe
