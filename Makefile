@@ -8,7 +8,7 @@ DOCKER_PASSWORD := dckr_pat_kYFQGC5i027DXD-eTW37RNW7wyw
 deliver_image_to_dockerhub: build cleanup push
 
 build:
-	cd firaspfe && docker build -t $(DOCKER_ImageName) .
+	docker build -t $(DOCKER_ImageName) .
 
 push:
 	docker tag $(DOCKER_ImageName) $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
