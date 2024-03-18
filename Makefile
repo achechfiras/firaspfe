@@ -16,4 +16,4 @@ push:
 	docker push $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
 
 cleanup:
-	rm -rf firaspfe
+	rm -r firaspfe
