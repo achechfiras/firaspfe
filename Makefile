@@ -1,7 +1,7 @@
 REPO_URL :=  https://github.com/achechfiras/firaspfe.git
 DOCKER_ImageName := react
 DOCKER_REPO := pfe
-DOCKER_TAG := ImgPfe
+DOCKER_TAG := imgpfe
 DOCKER_USERNAME := achechfiras
 DOCKER_PASSWORD := dckr_pat_kYFQGC5i027DXD-eTW37RNW7wyw
 
