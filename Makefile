@@ -1,5 +1,5 @@
 REPO_URL :=  https://github.com/achechfiras/firaspfe.git
-DOCKER_ImageName := react
+DOCKER_ImageName := react:latest
 DOCKER_REPO := pfe
 DOCKER_TAG := imgpfe
 DOCKER_USERNAME := achechfiras
@@ -12,7 +12,7 @@ build:
 	docker build -t $(DOCKER_ImageName) .
 
 push:
-	docker tag $(DOCKER_ImageName):latest $(DOCKER_TAG)
+	docker tag $(DOCKER_ImageName) $(DOCKER_TAG)
 	docker login -u $(DOCKER_USERNAME) -p $(DOCKER_PASSWORD)
 	docker push $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
 	cd ..
