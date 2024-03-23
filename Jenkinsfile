@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     git credentialsId: 'pfecred', url: 'https://github.com/achechfiras/firaspfe.git'
+                    echo 'Repository cloned successfully'
                 }
             }
         }
