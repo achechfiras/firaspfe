@@ -11,7 +11,7 @@ build:
 	docker build -t $(DOCKER_ImageName) .
 	docker images
 push:
-	docker tag $(DOCKER_ImageName):latest $(DOCKER_ImageName):$(DOCKER_TAG) 
+	docker tag $(DOCKER_ImageName) $(DOCKER_ImageName):$(DOCKER_TAG) 
 	docker login -u $(DOCKER_USERNAME) -p $(DOCKER_PASSWORD)
 	docker push $(DOCKER_ImageName)/$(DOCKER_TAG)
 	cd ..
