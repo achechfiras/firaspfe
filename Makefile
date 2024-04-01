@@ -12,6 +12,7 @@ build:
 	cd firaspfe && docker build -t $(DOCKER_ImageName) .
 	docker images
 push:
+	echo "azertyuiop"
 	docker tag $(DOCKER_ImageName) $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
 	docker login -u $(DOCKER_USERNAME) -p $(DOCKER_PASSWORD)
 	docker push $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
