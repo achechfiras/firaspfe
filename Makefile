@@ -13,6 +13,6 @@ push:
 	docker push $(DOCKER_USERNAME)/$(DOCKER_REPO):$(DOCKER_TAG)
 
 cleanup:
-	ls -la
+	ls -l
 	rm -r *
-	ls -la
+	ls -l
