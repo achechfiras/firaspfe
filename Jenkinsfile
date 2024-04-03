@@ -15,7 +15,6 @@ pipeline {
             steps {
                 script {
                     sh 'docker build -t img_react .'
-                    sh 'docker images'
                     sh 'make Makefile deliver_image_to_dockerhub'
                 }
             }
