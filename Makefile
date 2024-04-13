@@ -16,3 +16,4 @@ cleanup:
 	ls -l
 	rm -r *
 	ls -l
+	ls
